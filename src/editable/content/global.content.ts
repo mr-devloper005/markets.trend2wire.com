@@ -3,45 +3,53 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline || 'Media distribution insights and announcements',
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'News, media, and public updates',
+    announcement: 'Media distribution insights, practical release strategy, and timely communication updates.',
+    announcementCta: { label: 'Explore now', href: '/media-distribution' },
     primaryLinks: [
-      { label: 'Latest Updates', href: '/updates' },
-      { label: 'News Media', href: '/updates?category=news-media' },
-      { label: 'Press Releases', href: '/updates?category=press-release' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'PR services', href: '/media-distribution' },
+      { label: 'Sectors', href: '/article' },
+      { label: 'Locations', href: '/listing' },
+      { label: 'About', href: '/about' },
     ],
     actions: {
-      primary: { label: 'Browse updates', href: '/updates' },
-      secondary: { label: 'Submit', href: '/contact' },
+      primary: { label: 'Talk with an expert', href: '/contact' },
+      secondary: { label: 'Search archive', href: '/search' },
     },
   },
   footer: {
-    tagline: 'Newsroom updates and distributed media',
-    description: 'A flexible media distribution surface for announcements, press coverage, public updates, and dynamic news categories.',
+    tagline: 'Media distribution, strategy, and newsroom guidance',
+    description: 'Editorial coverage, release strategy, distribution options, and practical updates designed for organizations that need credible visibility.',
     columns: [
       {
-        title: 'Explore',
+        title: 'About',
         links: [
-          { label: 'Latest Updates', href: '/updates' },
-          { label: 'News Media', href: '/updates?category=news-media' },
-          { label: 'Business News', href: '/updates?category=business' },
-          { label: 'Press Releases', href: '/updates?category=press-release' },
+          { label: 'Contact', href: '/contact' },
+          { label: 'Search', href: '/search' },
+          { label: 'Log in', href: '/login' },
+          { label: 'Sign up', href: '/signup' },
         ],
       },
       {
-        title: 'Site',
-        links: [
-          { label: 'About', href: '/about' },
-          { label: 'Contact', href: '/contact' },
-        ],
+        title: '',
+        links: [],
+      },
+      {
+        title: '',
+        links: [],
       },
     ],
-    bottomNote: 'Built for fast, flexible, and category-led media distribution.',
+    offices: [
+      { city: 'Amsterdam', meta: 'Herengracht 252, 1016 BV, Amsterdam, Netherlands' },
+      { city: 'Austin', meta: '10900 Research Blvd, Austin, TX 78759, USA' },
+      { city: 'Stockholm', meta: 'Torsgatan 2, 111 75 Stockholm, Sweden' },
+      { city: 'Madrid', meta: 'Princesa St. 31, Moncloa, Madrid, Spain' },
+    ],
+    bottomNote: 'Prepared for media teams, founders, and communication leads who need sharper distribution decisions.',
   },
   commonLabels: {
     readMore: 'Read more',
