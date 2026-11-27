@@ -144,7 +144,6 @@ function BackLink({ task }: { task: TaskKey }) {
 
 function ArticleDetail({ task, post, related, comments }: { task: TaskKey; post: SitePost; related: SitePost[]; comments: Array<{ id: string; name: string; comment: string; createdAt: string }> }) {
   const images = getImages(post)
-  const published = post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : ''
   const toc = getTableOfContents(post)
 
   return (
@@ -155,7 +154,6 @@ function ArticleDetail({ task, post, related, comments }: { task: TaskKey; post:
           <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_.92fr] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-4 text-sm text-black/65">
-                {published ? <time>{published}</time> : null}
                 <span>39 min read</span>
               </div>
               <h1 className="editorial-serif mt-5 max-w-4xl text-5xl leading-[1.03] tracking-[-0.05em] text-[#111] sm:text-6xl">{post.title}</h1>
@@ -465,7 +463,6 @@ function RelatedPanel({ task, post, related, compact = false }: { task: TaskKey;
           <div className="mt-4 grid gap-3 text-sm text-black/75">
             <p className="inline-flex items-center gap-2"><Tag className="h-4 w-4" /> Task: {taskConfig?.label || task}</p>
             <p className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4" /> Site: {SITE_CONFIG.name}</p>
-            {post.publishedAt ? <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p> : null}
           </div>
         </div>
       ) : null}
